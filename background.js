@@ -1,10 +1,9 @@
 //https://developer.chrome.com/extensions/samples#search:screenshot
 
 /* bugs:
-if theyve already taken the exact same screenshot it wont work
+doesn't work on chrome web store, other sensitive areas we can't access
 
 todo:
-make html look pretty, make icon look pretty
 */
 
 // To make sure we can uniquely identify each screenshot tab, add an id as a
@@ -23,7 +22,7 @@ chrome.browserAction.onClicked.addListener(function() {
 		//create a download link and click it
 		let downloadLink = document.createElement("a");
 		downloadLink.href = screenshotUrl;
-		downloadLink.download = true;
+		downloadLink.download = "screenshot-" + formatDate(new Date() ) + ".jpg";
 		downloadLink.style.display = "none";
 		document.body.appendChild(downloadLink);
 		downloadLink.click();
@@ -68,3 +67,14 @@ chrome.browserAction.onClicked.addListener(function() {
     });
   });
 });
+
+function formatDate(date) {
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  hours %= 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return date.getMonth()+1 + "-" + date.getDate() + "-" + date.getFullYear() + "  " + strTime;
+}

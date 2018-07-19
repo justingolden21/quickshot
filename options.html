@@ -1,13 +1,29 @@
 <html>
+<title>Options | SimpleShot</title>
+<link rel="shortcut icon" type="image/png" href="img/camera.png"/>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="bootstrap.min.css">
 <script src="options.js"></script>
 <body>
+<h3><img src="img/settings.svg" height="36px"> SimpleShot Options</h3>
+<div title="Click to change what launching the extension does">
+<input id="autoDownload" type="checkbox" class=""><label for="autoDownload">&nbsp;Auto Download</label>
+</div>
+<p>If checked, SimpleShot will download the image immediatly when the icon is clicked or when the keyboard shortcut is pressed</p>
+<p>If unchecked, SimpleShot will will open a new tab with the screenshot and a download link</p>
+<h3><img src="img/info.svg" height="36px"> SimpleShot Info</h3>
+<p>You can also take a screenshot with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd></p>
+<p>You can change it in <a id="extensionSettings" title="Click to open your extension shortcut settings">chrome://extensions/shortcuts</a></p>
+<hr>
+<a id="shareLink" title="Click to open the app's store page">Rate or Share <img src="img/star.svg" height="24px"></a>
+<p>Let us know what you think at <a id="mailLink" title="Click to send us an email">feedback@rgbstudios.org <img src="img/mail.svg" height="24px"></a></p>
 
-<input id="autoDownload" type="checkbox"><label for="autoDownload">auto download</label>
-<br>
-if checked, will download the image when clicked or keyboard shortcut pressed
-<br>
-if not, will open a new tab with image and download link
-<br>
-you can also take a screenshot with ctrl+shift+z, which you can change in chrome://extensions/shortcuts
+
+<p><b><img src="img/rgb.svg" height="36px">&nbsp;RGB Studios</b></p>
+<a  title="Click to visit our homepage at rgbstudios.org" id="rgbLink">rgbstudios.org</a>
+
+<!-- todo: link to store to rate and share. link to contact/feedback -->
+
+<p id="versionP"></p>
 </body>
 </html>

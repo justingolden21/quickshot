@@ -1,25 +1,34 @@
 {
-  "name": "QuickShot",
+  "name": "SimpleShot",
   
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Z",
-        "mac": "MacCtrl+Shift+Z"
+        "default": "Ctrl+Shift+1",
+        "windows": "Ctrl+Shift+1",
+        "mac": "MacCtrl+Shift+1",
+        "chromeos": "Ctrl+Shift+1",
+        "linux": "Ctrl+Shift+1"
       }
     }
   },
+
+  "icons": { 
+  	 "16": "img/icon16.png",
+           "48": "img/icon48.png",
+          "128": "img/icon128.png"
+    },
   
   "options_page": "options.html",
   
-  "version": "1.0",
-  "description": "Take a screenshot with the click of a button",
+  "version": "1.0.1",
+  "description": "Capture a picture of any page with the click of a button",
   "background": {
     "persistent": false,
     "scripts": ["background.js"]
   },
   "browser_action": {
-    "default_icon": "camera.png",
+    "default_icon": "img/camera.png",
     "default_title": "Click to take a screenshot..."
   },
   "permissions": [

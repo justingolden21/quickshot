@@ -1,0 +1,11 @@
+* {
+	text-align: center;
+}
+#extensionSettings, #rgbLink, #mailLink, #shareLink {
+	cursor: pointer;
+}
+input[type=checkbox] {
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+}

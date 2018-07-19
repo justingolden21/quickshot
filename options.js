@@ -13,4 +13,26 @@ window.onload = function() {
 		console.log(this.checked.toString() );
 
 	}
+
+	document.getElementById("extensionSettings").onclick = function() {
+		chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
+	}
+
+	document.getElementById("rgbLink").onclick = function() {
+		chrome.tabs.create({ url: "http://rgbstudios.org" });	
+	}
+
+	document.getElementById("mailLink").onclick = function() {
+		chrome.tabs.create({ url: "mailto:feedback@rgbstudios.org" });	
+	}
+
+	document.getElementById("shareLink").onclick = function() {
+		chrome.tabs.create({ url: "https://chrome.google.com/webstore/detail/simpleshot/hpnikgbjfhnpcaoicgbkkialbejlecke" });	
+	}
+
+
+	
+
+	document.getElementById("versionP").innerHTML = "Version " + chrome.runtime.getManifest().version;
+
 }
